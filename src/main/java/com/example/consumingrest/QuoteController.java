@@ -16,8 +16,9 @@ public class QuoteController {
 
     @GetMapping
     public String getQuote(Model model){
-       model.addAttribute("quote");
-       return "quote";
+        Root gQuote = quoteService.getRandomQuote();
+       model.addAttribute("quote", gQuote);
+       return "randomquote";
     }
 
 }

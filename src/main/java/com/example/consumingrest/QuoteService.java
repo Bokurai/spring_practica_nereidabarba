@@ -9,10 +9,7 @@ public class QuoteService {
     @Autowired
     RestTemplate restTemplate;
 
-    protected QuoteGet[] quoteGets(){
-        QuoteGet data[] = restTemplate.getForObject(
-
-        );
-        return data;
+    public Root getRandomQuote(){
+        return restTemplate.getForObject("https://quotes15.p.rapidapi.com/quotes/random/", Root.class);
     }
 }

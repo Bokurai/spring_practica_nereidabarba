@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <title>Random Quotes from Famous People</title>
+</head>
+<body>
+<div class="container">
+    <h2 class="text-center mt-3">Quote of the day</h2>
+    <div class="media">
+        <img class="mr-3" src="https://random.imagecdn.app/200/300" alt="">
+        <img class="mr-3" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3201791/quote-left-icon-md.png" alt="" style="max-width: 25px;">
+        <div class="media-body">
+            <div class="d-flex align-items-center">
+                <p class="card-text mb-0" th:text="${quote.content}"></p>
+                <img class="ml-3" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3201792/quote-right-icon-md.png" alt="" style="max-width: 25px;">
+            </div>
+            <p class="font-weight-bold mt-0" th:text="${quote.originator.name}"></p>
+            <button class="btn btn-secondary" onclick="location.reload();">Another quote,please</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
